@@ -14,9 +14,14 @@ print("Thanks everyone! That was a great show!\n\n")
 
 
 pizzas = ['cheese', 'more cheese', 'the most cheese']
+pizzas_copy = pizzas[:]
+pizzas_copy.append('pepperoni')
 
 for pizza in pizzas:
     print(f"I love {pizza.title()}.")
+
+for pizza in pizzas_copy:
+    print(f"I also love {pizza.title()}")
 
 print("\nI like pizza.\n\n")
 
@@ -63,11 +68,6 @@ print(square_list)
 for value in range(1, 21):
     print(value)
 
-"""
-for value in range(1, 1000000):
-    print(value)
-"""
-
 # See how quickly Python can sum a million digits together
 million_digits = list(range(1,1000001))
 print(f"Minimum:{min(million_digits)}\nMaximum:{max(million_digits)}")
@@ -93,3 +93,34 @@ for value in cube_list_cubed:
 # More comprehension practice
 cube_list_comprehended = [value ** 3 for value in range(1,11)]
 print(cube_list_comprehended)
+
+print('\n-----\n')
+print('Slicing Practice')
+print('\n-----\n')
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])
+print(players[1:4])
+print(players[:4])
+print(players[2:])
+print('---')
+print(f"The Team: {players}")
+print('---')
+print("Here are the first three players for the team:")
+
+# Iterating through a slice
+for player in players[0:3]:
+    print(player.title())
+print('---')
+
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friends_foods = my_foods[:]
+
+my_foods.append('cannoli')
+friends_foods.append('ice cream')
+
+print("My favorite foods are:")
+print(my_foods)
+
+print('\nMy friends favorite foods are:')
+print(friends_foods)

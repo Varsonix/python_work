@@ -49,7 +49,20 @@ def functionMe():
 
 first_name = 'ada'
 last_name = 'lovelace'
-full_name = f'{first_name} {last_name}'
+FULL_NAME = f'{first_name} {last_name}'
 message = f"Hello, {full_name.title()}!"
 
 print(message)
+
+# Testing long strings for PEP8 compliance
+message_test = (
+    "This is a long string that spans multiple lines, but is neatly "
+    "formatted within parentheses."
+)
+message_test_two = "This is a long string that spans multiples lines, but is " \
+                    "Neatly formatted using a backslash."
+message_test_three = """This is also a long string that spans multiple lines,
+                        but is neatly formatted using triple quotes"""
+print(message_test)
+print(message_test_two)
+print(message_test_three)
