@@ -1,3 +1,4 @@
+#NOTE: * creates a tuple, but ** creates a dictionary for kvpairs
 def build_profile(first, last, **user_info):
     """Build a dictionary containing everything we know about a user"""
     user_info['first_name'] = first
