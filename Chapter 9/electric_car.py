@@ -73,15 +73,3 @@ class ElectricCar(Car):
         """
         super().__init__(make, model, year)
         self.battery = Battery()
-
-my_leaf = ElectricCar('nissan', 'leaf', '2024')
-print(my_leaf.get_descriptive_name())
-my_leaf.battery.describe_battery()
-my_leaf.battery.get_range()
-
-
-my_ecar = ElectricCar('ford', 'f150 hybrid', '2025')
-my_ecar.battery.get_range()
-my_ecar.battery.upgrade_battery()
-my_ecar.battery.get_range()
-my_ecar.battery.upgrade_battery()
