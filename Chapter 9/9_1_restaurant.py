@@ -26,9 +26,25 @@ class Restaurant:
         """Increment customers"""
         self.number_served += customers
 
-applebees = Restaurant('Applebees Bar and Grill', 'Bad Food')
-applebees.describe_restaurant()
-applebees.set_number_served(33)
-applebees.describe_restaurant()
-applebees.increment_number_served(7)
-applebees.describe_restaurant()
+class IceCreamStand(Restaurant):
+    """ Creating child class for ice cream shop """
+
+    def __init__(self, restaurant_name, cuisine_type):
+        """ 
+        Initialize off the parent class.
+        Add a flavors list (Hard coded for now)
+        """
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ['Chocolate', 'Strawberry', 'Vanilla',
+                        'Matcha', 'Peanut Butter', 'Peppermint',
+                        'Cookie Dough', 'Sea Salt', 'Neopolitan']
+    
+    def list_flavors(self):
+        """ Print out all the flavors at the ice cream shop. """
+        print("Flavors available: ")
+        for flavor in self.flavors:
+            print(f"- {flavor}")
+
+baskin_robbins = IceCreamStand('Baskin Robins 31 Flavors', 'Ice Cream')
+baskin_robbins.describe_restaurant()
+baskin_robbins.list_flavors()
