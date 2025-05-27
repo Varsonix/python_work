@@ -11,3 +11,5 @@ while True:
 
     formatted_name = get_formatted_name(first, last)
     print(f"\nNeatly formatted name: {formatted_name}")
+
+    print("Is this something I would even want to use? Versus JBM")
